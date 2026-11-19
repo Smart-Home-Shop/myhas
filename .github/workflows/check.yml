@@ -38,6 +38,6 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: frenck/action-addon-linter@b2b6bec48be7f7058328f8b6684c17018715885e # v2.9.0
+      - uses: frenck/action-app-linter@d51677290aef26cdfc835271dd3c7343ce502809 # v2.21.2
         with:
           path: ./myhas-agent
