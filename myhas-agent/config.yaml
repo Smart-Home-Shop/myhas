@@ -1,0 +1,39 @@
+# The Home Assistant app of the myhas agent.
+# The keys follow https://developers.home-assistant.io/docs/apps/configuration
+# (the Supervisor still calls apps "addons" in its file formats). Keys left
+# out use their default, and the app linter refuses a key set to its default.
+#
+# version MUST be a published tag of the agent images, and the same as the
+# top entry of CHANGELOG.md. CI checks both.
+name: myhas agent
+version: "0.1.0"
+slug: myhas_agent
+description: Remote access to this Home Assistant through myhas.io, with no open port.
+url: https://github.com/Smart-Home-Shop/myhas/tree/main/myhas-agent
+arch:
+  - amd64
+  - aarch64
+# The pre-built image. The Supervisor replaces {arch} with amd64 or aarch64
+# and pulls the tag "version". The images are public; their source is not.
+image: ghcr.io/paul-ridgway/myhas-agent-{arch}
+# The agent is PID 1 and handles SIGTERM itself. It starts no child process,
+# so it needs no init (there is no s6-overlay in the image).
+init: false
+# The status page, in the HA sidebar, on the default ingress port 8099. Only
+# the ingress proxy (172.30.32.2) can open it.
+ingress: true
+panel_icon: mdi:remote-desktop
+panel_title: myhas
+# The defaults also apply to these, on purpose:
+# - startup "application" and boot "auto": the agent starts with HA.
+# - no Supervisor API, no HA API and no host network: the agent reaches HA at
+#   http://homeassistant:8123 on the Supervisor network and needs no
+#   privilege.
+# - backup "hot": /data holds the device key, so a restored backup keeps the
+#   instance claimed.
+options:
+  server_url: https://portal.myhas.io
+  log_level: info
+schema:
+  server_url: url
+  log_level: list(debug|info|warning|error)

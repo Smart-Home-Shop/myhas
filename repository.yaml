@@ -1,0 +1,6 @@
+# The Home Assistant app repository of myhas. Home Assistant reads this file
+# when a user adds https://github.com/Smart-Home-Shop/myhas under
+# Settings > Apps > App store > Repositories. The app is in myhas-agent/.
+name: myhas
+url: https://github.com/Smart-Home-Shop/myhas
+maintainer: myhas

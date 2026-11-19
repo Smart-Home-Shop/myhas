@@ -1,0 +1,9 @@
+configuration:
+  server_url:
+    name: Server URL
+    description: >-
+      The address of the myhas portal. Keep the default.
+  log_level:
+    name: Log level
+    description: >-
+      How much the agent writes to its log. Use debug only to find a problem.

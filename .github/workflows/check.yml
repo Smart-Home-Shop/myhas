@@ -1,0 +1,43 @@
+# Checks the app on each pull request and each push to main.
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  version:
+    name: Version and images
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: config.yaml and CHANGELOG.md agree, and the images exist
+        run: |
+          dir=myhas-agent
+          v=$(sed -n 's/^version: "\(.*\)"$/\1/p' "$dir/config.yaml")
+          [ -n "$v" ] || { echo "$dir/config.yaml has no quoted version"; exit 1; }
+          top=$(grep -m1 '^## ' "$dir/CHANGELOG.md" | sed 's/^## //')
+          [ "$top" = "$v" ] || { echo "the top entry of CHANGELOG.md is $top, config.yaml says $v"; exit 1; }
+          image=$(sed -n 's/^image: //p' "$dir/config.yaml")
+          for arch in $(sed -n '/^arch:/,/^[a-z]/s/^  - //p' "$dir/config.yaml"); do
+            ref="${image/\{arch\}/$arch}:$v"
+            docker manifest inspect "$ref" >/dev/null \
+              || { echo "the image $ref does not exist or is not public"; exit 1; }
+            echo "found $ref"
+          done
+          echo "app version $v"
+
+  lint:
+    name: App linter
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: frenck/action-addon-linter@b2b6bec48be7f7058328f8b6684c17018715885e # v2.9.0
+        with:
+          path: ./myhas-agent
