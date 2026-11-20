@@ -29,7 +29,7 @@ account (by invitation).
 ## For maintainers
 
 This repository holds only the app manifest and its docs. The agent images
-(`ghcr.io/paul-ridgway/myhas-agent-{arch}`) come from a separate, private
+(`ghcr.io/smart-home-shop/myhas-agent-{arch}`) come from a separate, private
 repository. To release a new version of the app:
 
 1. Publish the agent images with the tag `X.Y.Z` (a tag `agent-vX.Y.Z` in
