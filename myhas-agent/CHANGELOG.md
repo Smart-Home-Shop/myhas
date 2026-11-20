@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+- When you change the address of your Home Assistant in the portal, the
+  agent connects again at once and shows the new address.
+
 ## 0.2.0
 
 - The app is now called **myhas.io** in Home Assistant and in the sidebar.

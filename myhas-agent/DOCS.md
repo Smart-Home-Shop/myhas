@@ -130,6 +130,10 @@ In the portal at <https://portal.myhas.io> you can:
   "Remote access is off" and nothing reaches your Home Assistant. The agent
   stays connected, so you can turn it on again at once.
 - **Rename it.**
+- **Change its address**, for example to `https://smith-home.ha.myhas.io`.
+  You can also choose the address when you claim. The old address stops
+  working at once, so update your bookmarks and the Home Assistant app on
+  your phone. Nobody else can take the old address for 30 days.
 - **Delete it** (**Delete instance**). The address stops working at once,
   and the agent shows a new claim code. To use myhas.io again, claim the new
   code.
