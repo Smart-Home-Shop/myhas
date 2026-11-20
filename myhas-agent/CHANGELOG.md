@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.0
+
+- **Fix it for me:** while Home Assistant doesn't trust the agent yet, the
+  status page has a button that sets it up for you. Home Assistant restarts
+  once; if it asks you to confirm the new HTTP server settings, select
+  **Confirm**.
+- The app now asks for access to the Home Assistant API for this, so Home
+  Assistant shows a lower security rating for it. Only the agent uses this
+  access, inside the app: myhas.io can't use it.
+
 ## 0.3.0
 
 - When you change the address of your Home Assistant in the portal, the

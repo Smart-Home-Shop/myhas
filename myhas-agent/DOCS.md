@@ -44,6 +44,14 @@ To do it by hand:
 
 ## 3. Let Home Assistant trust the agent (one time)
 
+**The easy way:** skip this step for now. After you start the agent in
+step 4, its status page shows **Fix it for me**. Select it, and the agent
+does this step for you. Home Assistant restarts once. If Home Assistant
+asks you to confirm the new HTTP server settings, select **Confirm**. This
+needs Home Assistant 2026.11 or later.
+
+To do it yourself instead, read on.
+
 myhas.io tells Home Assistant the real address of each visitor. Home Assistant
 needs this for its log and for its protection against repeated failed
 logins. Home Assistant accepts that information only from a proxy that it
@@ -107,7 +115,7 @@ itself. You don't need to restart anything.
 Within a few seconds the status page changes to **Connected**, with an
 **Open … remotely** button and the remote address of your Home Assistant. If
 it says **Almost there** instead, Home Assistant doesn't trust the agent yet:
-do step 3. The page has an **Open network settings** button for it.
+select **Fix it for me**, or do step 3 by hand.
 
 ## 6. Open your Home Assistant remotely
 
@@ -147,7 +155,7 @@ the app. It shows one of these states:
 | --- | --- |
 | **Connecting** | The agent is connecting to myhas.io. |
 | **Waiting to be claimed** | The claim code and its link. Claim it in the portal. |
-| **Almost there** | The agent is connected, but Home Assistant doesn't trust it yet. Do step 3; the page has an **Open network settings** button. |
+| **Almost there** | The agent is connected, but Home Assistant doesn't trust it yet. Select **Fix it for me**, or do step 3 by hand. |
 | **Connected** | An **Open … remotely** button, and the name and the remote address of your Home Assistant. |
 | **Not connected** | The last error, and when the agent tries again. It tries again by itself, with a longer wait after each failure (at most 2 minutes). |
 
@@ -171,8 +179,8 @@ change them.
 ## Troubleshooting
 
 **Every remote visit shows `400: Bad Request`.**
-Home Assistant doesn't trust the agent. Do step 3, and check that Home
-Assistant restarted. The status page shows a warning until this is fixed.
+Home Assistant doesn't trust the agent. Select **Fix it for me** on the
+status page, or do step 3, and check that Home Assistant restarted. The status page shows a warning until this is fixed.
 
 **The address shows "Home Assistant is offline".**
 The agent isn't connected. Check that the app is running (**Settings →
@@ -209,6 +217,9 @@ The log never holds your passwords or the device key.
   Assistant. myhas.io can't use it to reach any other device on your network.
 - myhas.io doesn't keep your Home Assistant password: Home Assistant itself
   checks it. Your browser reaches myhas.io over HTTPS.
+- The app has access to the Home Assistant API. Only the agent uses it,
+  inside the app, for **Fix it for me**. myhas.io can't use it, and the
+  agent never passes the token on.
 - At its first start, the agent makes a device key. The key is in the data
   of the app (`/data/identity.key`) and never leaves your Home Assistant.
   The agent proves who it is with this key at each connection.

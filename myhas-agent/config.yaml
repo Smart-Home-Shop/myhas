@@ -6,7 +6,7 @@
 # version MUST be a published tag of the agent images, and the same as the
 # top entry of CHANGELOG.md. CI checks both.
 name: myhas.io
-version: "0.3.0"
+version: "0.4.0"
 slug: myhas_agent
 description: Remote access to this Home Assistant through myhas.io, with no open port.
 url: https://github.com/Smart-Home-Shop/myhas/tree/main/myhas-agent
@@ -23,10 +23,14 @@ init: false
 # the ingress proxy (172.30.32.2) can open it.
 ingress: true
 panel_icon: mdi:remote-desktop
+# "Fix it for me" on the status page sets the trusted proxies of Home
+# Assistant through its API. Only the agent uses the API, inside the app:
+# myhas.io cannot reach it, and the agent never passes the token on.
+homeassistant_api: true
 panel_title: myhas.io
 # The defaults also apply to these, on purpose:
 # - startup "application" and boot "auto": the agent starts with HA.
-# - no Supervisor API, no HA API and no host network: the agent reaches HA at
+# - no Supervisor API and no host network: the agent reaches HA at
 #   http://homeassistant:8123 on the Supervisor network and needs no
 #   privilege.
 # - backup "hot": /data holds the device key, so a restored backup keeps the
