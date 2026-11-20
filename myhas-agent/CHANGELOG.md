@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1
+
+- Fix it for me works now. In 0.4.0, Home Assistant refused the change
+  ("not a valid option at 'config.created_at'").
+
 ## 0.4.0
 
 - **Fix it for me:** while Home Assistant doesn't trust the agent yet, the

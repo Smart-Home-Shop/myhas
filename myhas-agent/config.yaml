@@ -6,7 +6,7 @@
 # version MUST be a published tag of the agent images, and the same as the
 # top entry of CHANGELOG.md. CI checks both.
 name: myhas.io
-version: "0.4.0"
+version: "0.4.1"
 slug: myhas_agent
 description: Remote access to this Home Assistant through myhas.io, with no open port.
 url: https://github.com/Smart-Home-Shop/myhas/tree/main/myhas-agent
