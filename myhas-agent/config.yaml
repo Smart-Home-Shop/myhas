@@ -8,8 +8,8 @@
 name: myhas.io
 version: "0.4.1"
 slug: myhas_agent
-description: Remote access to this Home Assistant through myhas.io, with no open port.
-url: https://github.com/Smart-Home-Shop/myhas/tree/main/myhas-agent
+description: Secure remote access to this Home Assistant, with no open port. Start it, then open the Web UI to set it up.
+url: https://portal.myhas.io
 arch:
   - amd64
   - aarch64
