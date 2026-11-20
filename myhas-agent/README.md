@@ -1,10 +1,10 @@
-# myhas agent
+# myhas.io
 
 Secure remote access to your Home Assistant through
-[myhas](https://portal.myhas.io), with no open port and no change to your
+[myhas.io](https://portal.myhas.io), with no open port and no change to your
 router.
 
-The agent opens one outbound, encrypted connection to myhas. You claim the
+The agent opens one outbound, encrypted connection to myhas.io. You claim the
 agent in the portal with a short code. Then your Home Assistant has its own
 address, for example `https://k7m9p3qrst.ha.myhas.io`, and Home Assistant's
 own login protects it.

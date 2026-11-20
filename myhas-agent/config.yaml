@@ -5,8 +5,8 @@
 #
 # version MUST be a published tag of the agent images, and the same as the
 # top entry of CHANGELOG.md. CI checks both.
-name: myhas agent
-version: "0.1.1"
+name: myhas.io
+version: "0.2.0"
 slug: myhas_agent
 description: Remote access to this Home Assistant through myhas.io, with no open port.
 url: https://github.com/Smart-Home-Shop/myhas/tree/main/myhas-agent
@@ -23,7 +23,7 @@ init: false
 # the ingress proxy (172.30.32.2) can open it.
 ingress: true
 panel_icon: mdi:remote-desktop
-panel_title: myhas
+panel_title: myhas.io
 # The defaults also apply to these, on purpose:
 # - startup "application" and boot "auto": the agent starts with HA.
 # - no Supervisor API, no HA API and no host network: the agent reaches HA at

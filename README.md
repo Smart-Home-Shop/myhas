@@ -1,6 +1,6 @@
-# myhas for Home Assistant
+# myhas.io for Home Assistant
 
-This is the Home Assistant app repository of [myhas](https://portal.myhas.io):
+This is the Home Assistant app repository of [myhas.io](https://portal.myhas.io):
 secure remote access to Home Assistant, with no open port and no change to
 your router.
 
@@ -8,15 +8,15 @@ your router.
 
 ## Apps
 
-### [myhas agent](myhas-agent)
+### [myhas.io](myhas-agent)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
 
-Connects this Home Assistant to myhas. See the
+Connects this Home Assistant to myhas.io. See the
 [documentation](myhas-agent/DOCS.md) for the setup.
 
-You need Home Assistant OS, because only it can run apps, and a myhas
+You need Home Assistant OS, because only it can run apps, and a myhas.io
 account (by invitation).
 
 ## Add this repository by hand
