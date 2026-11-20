@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0
+
+- The agent finds Home Assistant by itself, also when Home Assistant
+  listens on another port than 8123 (for example 80). It checks that the
+  address really is Home Assistant before it sends anything there.
+- The portal now shows when Home Assistant doesn't trust the agent or the
+  agent can't reach it, not only "online".
+- The **Server URL** option is gone: the app always uses myhas.io.
+
 ## 0.4.1
 
 - Fix it for me works now. In 0.4.0, Home Assistant refused the change

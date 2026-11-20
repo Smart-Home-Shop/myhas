@@ -1,8 +1,4 @@
 configuration:
-  server_url:
-    name: Server URL
-    description: >-
-      The address of the myhas.io portal. Keep the default.
   log_level:
     name: Log level
     description: >-

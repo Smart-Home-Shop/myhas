@@ -168,13 +168,15 @@ on it, and anyone with the code could claim your Home Assistant.
 
 ## Options
 
-You find these on the **Configuration** tab of the app. You don't need to
-change them.
+You find this on the **Configuration** tab of the app. You don't need to
+change it.
 
 | Option | Default | Meaning |
 | --- | --- | --- |
-| `server_url` | `https://portal.myhas.io` | The address of the myhas.io portal. Keep the default. |
 | `log_level` | `info` | How much the agent writes to its log: `debug`, `info`, `warning` or `error`. Use `debug` only to find a problem. |
+
+The agent finds the web interface of Home Assistant by itself, also when
+you changed its port in the HTTP server settings.
 
 ## Troubleshooting
 
@@ -188,14 +190,15 @@ Apps → myhas.io**), then look at the status page and the **Log** tab.
 
 **The address shows "Home Assistant isn't answering".**
 The agent is connected, but it can't reach Home Assistant. This happens
-while Home Assistant restarts. Wait a minute and try again.
+while Home Assistant restarts. Wait a minute and try again. If it lasts, the
+status page says why, for example when Home Assistant listens only on
+127.0.0.1 or uses HTTPS.
 
 **The address shows "Remote access is off".**
 Turn remote access on for this Home Assistant in the portal.
 
 **The status page says "Not connected".**
 It shows the reason. Check that this Home Assistant can reach the internet.
-If `server_url` was changed, set it back to `https://portal.myhas.io`.
 
 **The claim code expired.**
 Wait a few seconds. The agent shows a new code by itself.

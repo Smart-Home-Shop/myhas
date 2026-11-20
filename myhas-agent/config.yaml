@@ -6,7 +6,7 @@
 # version MUST be a published tag of the agent images, and the same as the
 # top entry of CHANGELOG.md. CI checks both.
 name: myhas.io
-version: "0.4.1"
+version: "0.5.0"
 slug: myhas_agent
 description: Secure remote access to this Home Assistant, with no open port. Start it, then open the Web UI to set it up.
 url: https://portal.myhas.io
@@ -35,9 +35,8 @@ panel_title: myhas.io
 #   privilege.
 # - backup "hot": /data holds the device key, so a restored backup keeps the
 #   instance claimed.
+# The agent always uses the server of myhas.io: there is no option for it.
 options:
-  server_url: https://portal.myhas.io
   log_level: info
 schema:
-  server_url: url
   log_level: list(debug|info|warning|error)
