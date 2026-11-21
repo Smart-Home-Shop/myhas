@@ -13,7 +13,7 @@ change to your router.
    **Fix it for me**).
 
 The same page shows the status at any time: connected or not, the address
-of your Home Assistant, for example `https://sunny-otter-4821.ha.myhas.io`,
+of your Home Assistant, for example `https://sunny-otter-4821.myhas.io`,
 and what to do if something is wrong.
 
 You need a myhas.io account (by invitation). Manage your Home Assistant at

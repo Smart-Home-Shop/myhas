@@ -2,7 +2,7 @@
 
 The myhas.io app gives you secure remote access to this Home Assistant
 through myhas.io. You open it from anywhere at its own address, for example
-`https://sunny-otter-4821.ha.myhas.io`, and you sign in with your normal Home
+`https://sunny-otter-4821.myhas.io`, and you sign in with your normal Home
 Assistant account.
 
 The agent opens one outbound, encrypted connection to myhas.io (HTTPS, port
@@ -120,7 +120,7 @@ select **Fix it for me**, or do step 3 by hand.
 ## 6. Open your Home Assistant remotely
 
 Open the address from the status page or from the portal, for example
-`https://sunny-otter-4821.ha.myhas.io`. Sign in with your Home Assistant user
+`https://sunny-otter-4821.myhas.io`. Sign in with your Home Assistant user
 name and password, as at home.
 
 The first visit to a new address can take a few seconds while myhas.io gets
@@ -138,7 +138,7 @@ In the portal at <https://portal.myhas.io> you can:
   "Remote access is off" and nothing reaches your Home Assistant. The agent
   stays connected, so you can turn it on again at once.
 - **Rename it.**
-- **Change its address**, for example to `https://smith-home.ha.myhas.io`.
+- **Change its address**, for example to `https://smith-home.myhas.io`.
   You can also choose the address when you claim. The old address stops
   working at once, so update your bookmarks and the Home Assistant app on
   your phone. Nobody else can take the old address for 30 days.
