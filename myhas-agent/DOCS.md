@@ -22,9 +22,14 @@ You need:
 
 ## 1. Add the myhas.io repository
 
-The quickest way: sign in to the portal at <https://portal.myhas.io>. While
-you have no instances, it shows **Add to my Home Assistant**. Select it.
-Your Home Assistant opens with the repository filled in. Select **Add**.
+The quickest way: select this button. It opens the app in your Home
+Assistant, and first asks to add the repository. Select **Add**. You are then
+on the app page: select **Install** and go on with step 3.
+
+[![Open the myhas.io app in my Home Assistant](https://my.home-assistant.io/badges/supervisor_app.svg)](https://my.home-assistant.io/redirect/supervisor_app/?app=8ad1d726_myhas_agent&addon=8ad1d726_myhas_agent&repository_url=https%3A%2F%2Fgithub.com%2FSmart-Home-Shop%2Fmyhas)
+
+The portal at <https://portal.myhas.io> shows the same button on its **Add an
+instance** page.
 
 To do it by hand:
 
