@@ -4,6 +4,7 @@ This is the Home Assistant app repository of [myhas.io](https://portal.myhas.io)
 secure remote access to Home Assistant, with no open port and no change to
 your router.
 
+[![Open the myhas.io app in my Home Assistant](https://my.home-assistant.io/badges/supervisor_app.svg)](https://my.home-assistant.io/redirect/supervisor_app/?app=8ad1d726_myhas_agent&addon=8ad1d726_myhas_agent&repository_url=https%3A%2F%2Fgithub.com%2FSmart-Home-Shop%2Fmyhas)
 [![Add the repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FSmart-Home-Shop%2Fmyhas)
 
 ## Apps
